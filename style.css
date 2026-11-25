@@ -14,25 +14,26 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
-    color: #3e3027;
+    background-color: var(--white);
+    color: var(--text);
     line-height: 1.7;
 }
 
 /* Main colors */
 :root {
-    --brown: #6f4e37;
-    --dark-brown: #3e2723;
-    --light-brown: #a67c52;
-    --cream: #f8f3ed;
-    --white: #ffffff;
-
+    --black: #101010;
+    --dark-black: #050505;
+    --gold: #D4AF37;
+    --light-gold: #F0D77A;
+    --white: #FFFFFF;
+    --soft-white: #F5F5F5;
+    --text: #222222;
 }
 
 
 
 .my-header {
-    background-color: var(--white);
+    background-color: var(--black);
     padding: 12px 7%;
     display: flex;
     justify-content: space-between;
@@ -47,9 +48,12 @@ body {
     align-items: center;
     gap: 12px;
     text-decoration: none;
-    color: var(--dark-brown);
+    color: var(--gold);
     font-size: 22px;
     font-weight: bold;
+    border: var(--white);
+    margin: 7px;
+
 }
 
 .logo img {
@@ -59,7 +63,7 @@ body {
 }
 
 .tagline {
-    color: var(--brown);
+    color: var(--light-gold);
     font-size: 14px;
     font-style: italic;
 }
@@ -67,7 +71,7 @@ body {
 
 
 .navigations {
-    background-color: var(--dark-brown);
+    background-color: var(--black);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,7 +84,8 @@ body {
 }
 
 .navigations a {
-    color: var(--white);
+    background-color: var(--gold);
+    color: var(--black);
     text-decoration: none;
     padding: 8px 15px;
     border-radius: 5px;
@@ -89,7 +94,7 @@ body {
 }
 
 .navigations a:hover {
-    background-color: var(--light-brown);
+    background-color: var(--light-gold);
 }
 
 
@@ -102,7 +107,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: var(--brown);
+    background-color: var(--gold);
 }
 
 .banner-image {
@@ -118,8 +123,8 @@ body {
     inset: 0;
     background: linear-gradient(
         90deg,
-        rgba(45, 28, 19, 0.85),
-        rgba(45, 28, 19, 0.35)
+        rgba(0, 0, 0, 0.88),
+        rgba(0, 0, 0, 0.38)
     );
 }
 
@@ -145,8 +150,8 @@ body {
 
 .button {
     display: inline-block;
-    background-color: var(--light-brown);
-    color: var(--white);
+    background-color: var(--gold);
+    color: var(--black);
     padding: 11px 23px;
     border-radius: 6px;
     text-decoration: none;
@@ -156,7 +161,7 @@ body {
 }
 
 .button:hover {
-    background-color: var(--dark-brown);
+    background-color: var(--light-gold);
     transform: translateY(-2px);
 }
 
@@ -171,7 +176,7 @@ body {
 
 .section-title {
     text-align: center;
-    color: var(--dark-brown);
+    color: var(--black);
     font-size: 30px;
     margin-bottom: 30px;
 }
@@ -181,14 +186,14 @@ body {
     display: block;
     width: 65px;
     height: 4px;
-    background-color: var(--light-brown);
+    background-color: var(--light-gold);
     margin: 10px auto 0;
     border-radius: 5px;
 }
 
 #about,
 #education {
-    background-color: var(--cream);
+    background-color: var(--soft-white);
 }
 
 #about {
@@ -216,7 +221,7 @@ body {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid var(--light-brown);
+    border: 6px solid var(--light-gold);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
@@ -225,20 +230,20 @@ body {
 }
 
 .small-heading {
-    color: var(--light-brown);
+    color: var(--light-gold);
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 3px;
 }
 
 .intro-text h2 {
-    color: var(--dark-brown);
+    color: var(--black);
     font-size: 36px;
     margin-bottom: 5px;
 }
 
 .intro-text h3 {
-    color: var(--brown);
+    color: var(--gold);
     font-size: 18px;
     margin-bottom: 15px;
 }
@@ -256,35 +261,8 @@ body {
     gap: 20px;
 }
 
-.card,
-.project-card {
-    background-color: var(--cream);
-    border: 1px solid #e4d6c8;
-    border-radius: 10px;
-    padding: 25px;
-    flex: 1 1 220px;
-    max-width: 340px;
-    box-shadow: 0 4px 12px rgba(62, 39, 35, 0.06);
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
-}
 
-.card {
-    text-align: center;
-    font-weight: bold;
-    color: var(--brown);
-}
 
-.card:hover,
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(62, 39, 35, 0.13);
-}
-
-.project-card h3 {
-    color: var(--dark-brown);
-    margin-bottom: 10px;
-}
 
 
 
@@ -293,12 +271,12 @@ body {
     margin: auto;
     padding: 25px;
     background-color: var(--white);
-    border-left: 5px solid var(--light-brown);
+    border-left: 5px solid var(--light-gold);
     border-radius: 6px;
 }
 
 .education-card h3 {
-    color: var(--brown);
+    color: var(--gold);
     margin-bottom: 10px;
 }
 
@@ -307,7 +285,7 @@ body {
 .contact-info {
     max-width: 600px;
     margin: auto;
-    background-color: var(--cream);
+    background-color: var(--soft-white);
     padding: 25px;
     border-radius: 10px;
 }
@@ -318,26 +296,26 @@ body {
 }
 
 .contact-info a {
-    color: var(--brown);
+    color: var(--gold);
     text-decoration: none;
 }
 
 .contact-info a:hover {
-    color: var(--light-brown);
+    color: var(--light-gold);
     text-decoration: underline;
 }
 
 
 
 .footer {
-    background-color: var(--dark-brown);
+    background-color: var(--black);
     color: var(--white);
     text-align: center;
     padding: 25px 15px;
 }
 
 .footer p + p {
-    color: #e1c6a9;
+    color: var(--light-gold);
     font-style: italic;
 }
 
