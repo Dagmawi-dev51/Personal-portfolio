@@ -100,22 +100,28 @@ body {
 
 
 .banner {
-    height: 430px;
+    width: 100%;
+    height: auto;
+    min-height: 430px;
+    padding: 0;
+    margin: 0;
     position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: var(--gold);
+    background-color: white;
+    
 }
 
 .banner-image {
     position: absolute;
     inset: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
 }
 
 .banner-overlay {
